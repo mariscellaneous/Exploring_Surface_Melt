@@ -1,7 +1,7 @@
 from smrt import make_snowpack, make_model, sensor_list
 import numpy as np
 
-class grain_inversion_smrt:
+class GrainInversionSmrt:
     def __init__(self,sensor='18V',EM='iba',solver='dort',microstructure='exponential'):
         self.sensor = sensor
         self.EM = EM
