@@ -1,4 +1,4 @@
-# Quantifying Melt
+# Exploring Surface Melt
 
 This repository combines:
 - **SMRT** (Snow Microwave Radiative Transfer Model Framework; Picard et al., 2018)
