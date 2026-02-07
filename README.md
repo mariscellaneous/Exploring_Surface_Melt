@@ -1,37 +1,12 @@
-# Quantifying Melt Mockup
-
-A theoretical mockup for ice shelf melt on **Larsen C** that uses microwave radiative transfer modeling to **quantify liquid water content in the upper 10 cm of snow**.
+# Quantifying Melt
 
 This repository combines:
 - **SMRT** (Snow Microwave Radiative Transfer Model Framework; Picard et al., 2018)
 - **CFM** (Community Firn Model; Stevens et al., 2020) output as input forcing/structure
 - **AMSR-2** brightness temperature data (Meier et al., 2018)
 
-It loosely builds off the approach in **Dattler et al. (2024)**.
+ This approach is described in **Dattler et al. (2024)**, which detects melt on the surface of an ice sheet. The core of this code is in folder "Experiments". This repository has with extra Jupyter Notebooks and Python code dedicated to exploring/testing an inversion for liquid water content, as well. 
 
----
-
-## Overview
-
-The workflow in `Larsen_C_Mockup_Investigation.ipynb`:
-1. Interpolates **CFM output** and **AMSR-2** data onto the same grid.
-2. Selects a point on **Larsen C**.
-3. Uses `liquidinversion.py` to *roughly* estimate liquid water content in the **upper 10 cm** of snow from the modeled/observed microwave signal.
-4. Compares this estimate to the **CFM-derived liquid water content** for the same layer.
-
-> Note: This is a **theoretical mockup / prototype** intended for investigation and method development, not an operational retrieval.
-
----
-
-## Repository Contents
-
-- `Larsen_C_Mockup_Investigation.ipynb`  
-  Main Jupyter Notebook for data interpolation, point selection, SMRT setup, inversion, and comparison.
-
-- `liquidinversion.py`  
-  Helper module used by the notebook to perform a rough liquid water content inversion for the top 10 cm.
-
-(Additional input/output files may be required depending on your local data layout.)
 
 ---
 
